@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<title>SmartBank</title>
+<link rel="stylesheet" href="./style.css?v=123">
+</head>
+<body>
+
+<div class="container">
+<h1>SmartBank</h1>
+<h2>Login / Register</h2>
+<input id="username" placeholder="Username">
+<div class="password-box">
+    <input id="password" type="password" placeholder="Password">
+    <button type="button" id="togglePassword" onclick="togglePassword()">
+        👁
+    </button>
+</div>
+
+<button onclick="register()">Register</button>
+<button onclick="login()">Login</button>
+
+<hr>
+
+<div id="app" style="display:none;">
+    <h3>Stanje: <span id="balance">0</span> RSD</h3>
+
+    <input id="amount" type="number" placeholder="Iznos">
+
+    <button onclick="deposit()">➕ Dodaj pare</button>
+    <button onclick="withdraw()">➖ Skini pare</button>
+
+    <button id="logoutBtn" onclick="logout()">🚪 Logout</button>
+</div>
+
+<h3>Transakcije:</h3>
+<ul id="transactions"></ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
